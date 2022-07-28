@@ -1,0 +1,20 @@
+
+
+class School:
+     def classroom(self):
+ pass
+class Student(School):
+     def grade(self):
+ pass
+ 
+obj_school = School()
+obj_student = Student()
+
+print(isinstance(obj_school, School)) # true
+print(isinstance(obj_student, School)) # true
+print(type(obj_school) == School) # true
+print(type(obj_school) == Student) # false
+
+
+
+
