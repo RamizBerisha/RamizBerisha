@@ -1,0 +1,18 @@
+# import hashlib module
+    import hashlib
+#function to return SHA-1 hash
+    def audioHashFile(filename):
+ # create a hash object
+   h = hashlib.sha1()
+ # read file in binary mode
+  with open(filename,'rb') as file:
+ # iterate through the file
+ chunk = 0
+ while chunk != b'':# read 1024 bytes once
+ chunk = file.read(1024)
+ h.update(chunk)
+ # return hex of digest
+ return h.hexdigest()
+sha_result = audioHashFile('audio.mp3')
+print(sha_result)
+ 
